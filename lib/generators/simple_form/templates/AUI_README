@@ -1,0 +1,19 @@
+===============================================================================
+
+  Be sure to have a copy of the AUI stylesheet available on your
+  application, you can get it on https://docs.atlassian.com/aui/latest
+
+  Inside your views, please add fieldset tag, and wrapper your submit or cancel 
+  under a div that class is field_group
+  as the following:
+
+    = simple_form_for @user do |form|
+     %fieldset
+      = f.input :name, :as => :aui_string
+      = f.input :description, :as => :text_area
+
+      .field_group
+        = f.submit :class => "aui-button aui-button-primary"
+        = link_to "Cancel", "", :class => "aui-button aui-button-link"
+
+===============================================================================

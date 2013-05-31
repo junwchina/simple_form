@@ -17,5 +17,7 @@ module SimpleForm
     autoload :RangeInput,                   'simple_form/inputs/range_input'
     autoload :StringInput,                  'simple_form/inputs/string_input'
     autoload :TextInput,                    'simple_form/inputs/text_input'
+    autoload :TextAreaInput,                'simple_form/inputs/text_area_input'
+    autoload :AuiStringInput,               'simple_form/inputs/aui_string_input'
   end
 end

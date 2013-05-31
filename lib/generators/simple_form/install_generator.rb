@@ -21,6 +21,8 @@ module SimpleForm
           template "config/initializers/simple_form_bootstrap.rb"
         elsif options[:foundation]
           template "config/initializers/simple_form_foundation.rb"
+        elsif options[:aui]
+         template "config/initalizers/simple_form_aui.rb"
         end
 
         directory 'config/locales'
@@ -32,8 +34,12 @@ module SimpleForm
       end
 
       def show_readme
-        if behavior == :invoke && options.bootstrap?
-          readme "README"
+        if behavior == :invoke 
+          if options.bootstrap?
+            readme "README"
+          elsif options.aui? 
+            readme "AUI_README"
+          end
         end
       end
     end

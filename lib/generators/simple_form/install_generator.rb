@@ -6,6 +6,7 @@ module SimpleForm
       class_option :template_engine, :desc => 'Template engine to be invoked (erb, haml or slim).'
       class_option :bootstrap, :type => :boolean, :desc => 'Add the Twitter Bootstrap wrappers to the SimpleForm initializer.'
       class_option :foundation, :type => :boolean, :desc => 'Add the Zurb Foundation 3 wrappers to the SimpleForm initializer.'
+      class_option :aui, :type => :boolean, :desc => 'Add the AUI wrappers to the SimpleForm initializer.'
 
       def info_bootstrap
         return if options.bootstrap? || options.foundation?
@@ -22,7 +23,7 @@ module SimpleForm
         elsif options[:foundation]
           template "config/initializers/simple_form_foundation.rb"
         elsif options[:aui]
-         template "config/initalizers/simple_form_aui.rb"
+          template "config/initializers/simple_form_aui.rb"
         end
 
         directory 'config/locales'

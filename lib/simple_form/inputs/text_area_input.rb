@@ -2,6 +2,7 @@ module SimpleForm
   module Inputs
     class TextAreaInput < TextInput
       def input
+        input_html_classes.unshift(:textarea).delete(:text_area)
         input_html_options[:style] ||= ""
         input_html_options[:style] += ";height: 61px; width: 251px;"
         super

@@ -20,6 +20,21 @@ Run the generator to install with AUI:
 `rails generate simple_form:install --aui`
 
 
+Inside your views, please add fieldset tag, and wrapper your submit or cancel 
+under a div that class is field_group
+as the following:
+
+```erb
+= simple_form_for @user do |form|
+  %fieldset
+  = f.input :name, :as => :aui_string
+  = f.input :description, :as => :text_area
+
+  .field_group
+    = f.submit :class => "aui-button aui-button-primary"
+    = link_to "Cancel", "", :class => "aui-button aui-button-link"
+```
+
 ## License
 
 MIT License. Copyright 2012 Plataformatec.

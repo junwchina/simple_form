@@ -1,15 +1,15 @@
 # SimpleForm - Rails forms made easy.
 [![Build Status](https://secure.travis-ci.org/plataformatec/simple_form.png?branch=master)](http://travis-ci.org/plataformatec/simple_form)
 
-SimpleForm is really awesome, it support bootstrap and Foundation  yet. Now, i added AUI style to it.
-Be sure to have a copy of the AUI stylesheet available on your application, you can get it on 
-https://docs.atlassian.com/aui/latest
+SimpleForm is really awesome, it supports bootstrap and Foundation yet. Now, i add AUI style to it,
+be sure to have a copy of the AUI stylesheet available on your application, you can get it on 
+https://docs.atlassian.com/aui/latest . Enjoy it!
 
 ## Installation
 
 Add it to your Gemfile:
 
-`gem 'simple_form'`
+`gem 'simple_form_awesome'`
 
 Run the following command to install it:
 

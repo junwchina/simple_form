@@ -2,7 +2,7 @@ require 'simple_form/core_ext/hash'
 
 module SimpleForm
   class FormBuilder < ActionView::Helpers::FormBuilder
-    attr_reader :template, :object_name, :object, :wrapper
+    attr_reader :template, :object_name, :object, :wrapper, :wrapper_name
 
     # When action is create or update, we still should use new and edit
     ACTIONS = {
@@ -26,8 +26,7 @@ module SimpleForm
     map_type :date, :time, :datetime,              :to => SimpleForm::Inputs::DateTimeInput
     map_type :country, :time_zone,                 :to => SimpleForm::Inputs::PriorityInput
     map_type :boolean,                             :to => SimpleForm::Inputs::BooleanInput
-    map_type :text_area,                           to: SimpleForm::Inputs::TextAreaInput
-    map_type :aui_string,                          to: SimpleForm::Inputs::AuiStringInput
+    map_type :text_area,                           :to => SimpleForm::Inputs::TextAreaInput
 
 
     def self.discovery_cache
@@ -37,7 +36,8 @@ module SimpleForm
     def initialize(*) #:nodoc:
       super
       @defaults = options[:defaults]
-      @wrapper  = SimpleForm.wrapper(options[:wrapper] || SimpleForm.default_wrapper)
+      @wrapper_name = options[:wrapper] || SimpleForm.default_wrapper
+      @wrapper  = SimpleForm.wrapper(@wrapper_name)
     end
 
     # Basic input helper, combines all components in the stack to generate

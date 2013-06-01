@@ -9,7 +9,7 @@
 
     = simple_form_for @user do |form|
      %fieldset
-      = f.input :name, :as => :aui_string
+      = f.input :name
       = f.input :description, :as => :text_area
 
       .field_group

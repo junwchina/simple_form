@@ -9,6 +9,8 @@ module SimpleForm
           input_html_options[:type] ||= input_type if html5?
         end
 
+        input_html_classes.unshift("text") if aui?
+
         add_size!
         @builder.text_field(attribute_name, input_html_options)
       end

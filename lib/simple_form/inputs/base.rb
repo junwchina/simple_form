@@ -87,6 +87,9 @@ module SimpleForm
       end
 
       private
+      def aui? 
+        :aui == @builder.wrapper_name
+      end
 
       def add_size!
         input_html_options[:size] ||= [limit, SimpleForm.default_input_size].compact.min

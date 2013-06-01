@@ -21,13 +21,15 @@ Run the generator to install with AUI:
 
 
 Inside your views, please add fieldset tag, and wrapper your submit or cancel 
-under a div that class is field_group
+under a div that class is field_group.
+
+NOTE: please use :as => :text_area instead of :as => :text when you want to use aui style.
 as the following:
 
 ```erb
 = simple_form_for @user do |form|
   %fieldset
-  = f.input :name, :as => :aui_string
+  = f.input :name
   = f.input :description, :as => :text_area
 
   .field_group

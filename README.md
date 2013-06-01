@@ -9,7 +9,7 @@ https://docs.atlassian.com/aui/latest . Enjoy it!
 
 Add it to your Gemfile:
 
-`gem 'simple_form_awesome', '~> 2.3.0'`
+`gem 'simple_form_awesome', '~> 2.4.0'`
 
 Run the following command to install it:
 

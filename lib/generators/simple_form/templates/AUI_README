@@ -9,8 +9,8 @@
 
     = simple_form_for @user do |form|
      %fieldset
-      = f.input :name
-      = f.input :description, :as => :text_area
+      = f.input :name, :require => true
+      = f.input :description, :require => true
 
       .field_group
         = f.submit :class => "aui-button aui-button-primary"

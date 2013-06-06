@@ -18,4 +18,5 @@ SimpleForm.setup do |config|
 
   config.default_wrapper = :aui
   config.form_class = :aui
+  config.generate_additional_classes_for = [:input]
 end

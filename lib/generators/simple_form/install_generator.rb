@@ -16,7 +16,6 @@ module SimpleForm
       end
 
       def copy_config
-        template "config/initializers/simple_form.rb"
 
         if options[:bootstrap]
           template "config/initializers/simple_form_bootstrap.rb"
@@ -24,6 +23,8 @@ module SimpleForm
           template "config/initializers/simple_form_foundation.rb"
         elsif options[:aui]
           template "config/initializers/simple_form_aui.rb"
+        else 
+          template "config/initializers/simple_form.rb"
         end
 
         directory 'config/locales'

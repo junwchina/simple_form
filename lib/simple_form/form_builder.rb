@@ -26,7 +26,6 @@ module SimpleForm
     map_type :date, :time, :datetime,              :to => SimpleForm::Inputs::DateTimeInput
     map_type :country, :time_zone,                 :to => SimpleForm::Inputs::PriorityInput
     map_type :boolean,                             :to => SimpleForm::Inputs::BooleanInput
-    map_type :text_area,                           :to => SimpleForm::Inputs::TextAreaInput
 
 
     def self.discovery_cache
